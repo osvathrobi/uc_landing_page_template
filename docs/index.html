@@ -1,0 +1,228 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>'7 Elements' Under Construction/Maintenance Site Template Documentation</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	<style type="text/css" media="screen">
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+	</style>
+</head>
+
+
+<body>
+	<div class="container">
+	
+		<h3 class="center alt">&ldquo;7 Elements&rdquo; Documentation by &ldquo;Polka Dot Pump&rdquo; v1.0</h3>
+		
+		<hr>
+		
+		<h1 class="center">&ldquo;7 Elements&rdquo;</h1>
+		
+		<div class="borderTop">
+			<div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+					<strong>
+					Created: 02/22/2011<br>
+					By: Polka Dot Pump (Osvath-Boros Robert, Cseke Robert)<br>
+					Email: <a href="mailto:csekerobert@gmail.com">csekerobert@gmail.com</a>
+					</strong>
+				</p>
+			</div><!-- end div .span-6 -->		
+	
+			<div class="span-12 last">
+				<p class="prepend-top append-0">Thank you for purchasing our theme. If you have any questions that are beyond the scope of this help file, please feel free to email via our user page contact form <a href="http://themeforest.net/user/PolkaDotPump">here</a>. Thanks so much!</p>
+			</div>
+		</div><!-- end div .borderTop -->
+		
+		<hr>
+		
+		<h2 id="toc" class="alt">Table of Contents</h2>
+		<ol class="alpha">
+			<li><a href="#htmlStructure">HTML Structure</a></li>
+			<li><a href="#cssFiles">CSS Files and Structure</a></li>
+			<li><a href="#javascript">JavaScript</a></li>
+			<li><a href="#psdFiles">PSD Files</a></li>
+			<li><a href="#credits">Sources and Credits</a></li>
+			
+			<li><a href="#">PHP Code Explanation</a></li>
+		</ol>
+		
+		<hr>
+		
+		<h3 id="htmlStructure"><strong>A) HTML Structure</strong> - <a href="#toc">top</a></h3>
+		<p></p>
+		<p>This theme is a fixed layout with one column. 
+		   There are two main areas for content: a rounded box module under the header with an id of "main_module" and a large open area under it with an id of "submodule_area" (<em>Green</em> highlight on the screenshot below).
+		</p>
+		<p>
+		   We have seven preset content modules (<em>Yellow</em> highlight on the screenshot) which you can combine and edit to your liking. 
+		   We have even included eight HTML files with different preset combinations of these elements (1.html, 2.html, etc.).  
+		</p>
+		<p>
+		In order to create your own combination of these elements you can either do so in the HTML or in Javascript. We've even included a snippet that toggles the elements (found in 'all_modules_with_jquery_toggle.html', in the script section under the footer). 
+		</p>
+		  
+		<img src="assets/images/htmlstructure.png" alt="HTML Structure" />
+		
+		<hr>
+
+		<h3 id="cssFiles"><strong>B) CSS Files and Structure</strong> - <a href="#toc">top</a></h3>
+		
+		<p> We have included three CSS files. The first one is titled 'countdown.css' and it contains the general styling for the counter module.</p>
+		<p>
+		The second file is titled 'jquery.validity.css', this contains the styles for the validation overlays.
+		</p>
+		<p>The third file is titled 'style.css', this is the main stylesheet of the template and it contains all of the specific stylings for the page. The file is separated into sections using:</p>  
+		
+<pre>	/* === GENERAL DOCUMENT STYLES === */
+
+	some code
+
+	/* === LOGO AREA === */
+	
+	some code
+	
+	/* === MIDDLE MODULE AREA === */
+	
+	some code
+	
+	/* === MAIN BOTTOM AREA === */
+	
+	some code
+	
+	/* === FOOTER AREA === */
+	
+	some code
+	
+	/* === ROUNDED MODULE ELEMENTS === */
+	
+	some code
+	
+</pre>
+		
+		<p>If you would like to edit a specific section of the site, simply find the appropriate label in the CSS file, and then scroll down until you find the appropriate style that needs to be edited.</p> 
+
+		<hr>
+		
+		<h3 id="javascript"><strong>C) JavaScript</strong> - <a href="#toc">top</a></h3>
+		
+		<p>
+		In order for the site elements to work, you must define your 'MaintenanceSchedule' as a global variable. 
+		In our HTML examples we do this at the bottom of the source code within the jQuery load method. (startDate - when you took your site down / launchDate - the expected date the site will launch on)
+		</p>
+		
+		<pre>
+		MaintenanceSchedule = {
+					startDate : {
+						'day': 		22,
+						'month': 	1,
+						'year': 	2011,
+						'hour': 	10,
+						'min': 		0,
+						'sec': 		0
+					},
+					launchDate: {
+						'day': 		28,
+						'month': 	2,
+						'year': 	2012,
+						'hour': 	10,
+						'min': 		0,
+						'sec': 		0
+					}
+				};
+		</pre>
+		
+		<p>This theme imports six Javascript files.</p>
+		
+		<ol>
+			<li>jQuery</li>
+			<li>PDP Progress Bar Plugin</li>
+			<li>LWT Countdown Plugin</li>
+			<li>jQuery.validity v1.1.1</li>
+			<li>Our Newsletter Form Handler</li>
+			<li>Our Contact Form Handler</li>
+		</ol>
+		  
+		<p><strong>1. jQuery</strong> is a Javascript library that greatly reduces the amount of code that you must write.</p>
+		<p><strong>2. PDP Progress Bar Plugin</strong> extends jQuery with our custom styled animated progress bar. <br />
+			We have included the "LaunchProgressBarControl" which will calculate the value of the progressbar based on your maintenance schedule.
+			<br /><br />
+			You do this by calling the init method with a jQuery selector string:
+			<pre>
+	LaunchProgressBarControl.init('#pb3');
+			</pre>
+		Please explore the file to better understand it's functionality.
+		</p>
+		<p><strong>3. LWT Countdown Plugin</strong>
+		We have included the "LaunchCountdownControl" which will calculate the value of the progressbar based on your maintenance schedule.
+		<br /><br />
+			You do this by calling the init method with a jQuery selector string:
+			<pre>
+	LaunchCountdownControl.init('#countdown_dashboard');
+			</pre>
+			Please explore the file to better understand it's functionality.
+		</p>
+		
+		<p><strong>4. jQuery validity</strong><br />
+		Handles validity and displays proper error messages.
+		</p>
+		
+		<p><strong>5. Our Newsletter Form Handler</strong><br />
+		Handles all element interaction and ajax for the newsletter form. It only needs to be included in the header in order to work.
+		</p>
+		
+		
+		<p><strong>6. Our Contact Form Handler</strong>
+		Handles all element interaction and ajax for the contact form. It only needs to be included in the header in order to work.
+		</p>
+		
+		<hr>
+		
+		<h3 id="psdFiles"><strong>D) PSD Files</strong> - <a href="#toc">top</a></h3>
+		
+		<p>We've included one psd with this theme, it contains all of the images used to create this template. The layers are conveniantly organized into groups. </p>
+		
+		<hr>
+		
+		<h3 id="credits"><strong>E) Sources and Credits</strong> - <a href="#toc">top</a></h3>
+		
+		<ul>
+			<li>We've used the 'jquery.pdpprogressbar.js' plugin by Osvath-Boros Robert (co-author of this template). Copyright notice attached.</li>
+			<li>We've used the free jQuery countdown plugin 'jquery.lwtcountdown-1.0.js' by Vassilis Dourdounis. The Copyright and Permission Notice is included.</li>
+			<li>We've used the free jQuery countdown plugin 'jquery.validity' v1.1.1 by Wyatt Allen. The Copyright and Permission Notice is included.</li>
+		</ul>
+		
+		<hr>
+		
+		<h3 id="javascript"><strong>F) PHP</strong> - <a href="#toc">top</a></h3>
+		
+		<p>We have included two PHP files in the 'services' directory. 
+		<ol>
+			<li>ContactformService.php</li>
+			<li>NewsletterService.php</li>
+		</ol>
+		
+		<p>
+			1. This is the contact form back-end script which sends an email to the configured admin email address. You configure this by editing the $config variables at the beginning of the file. 'yourEmail' is the email address where the message will arrive. 'adminEmail' is what your server will report as the source of the message.
+		</p>
+		
+		<p>
+			2. This is the Newsletter form back-end script. It creates a CSV file (you don't require database access). You can configure the name of this file at the beginning of the script. Make sure the directory you set up for this CSV file is writeable (chmod 777). The resulting CSV file can be imported into any Newsletter service (MailChimp, etc.) or Excell.
+		</p>		
+		
+		<hr>
+		
+		<p>Once again, thank you so much for purchasing this theme. As we said at the beginning, we'd be glad to help you if you have any questions relating to this theme. No guarantees, but we'll do our best to assist. If you have a more general question relating to the themes on ThemeForest, you might consider visiting the forums and asking your question in the "Item Discussion" section.</p> 
+		
+		<p class="append-bottom alt large"><strong>Polka Dot Pump (Osvath-Boros Robert & Cseke Robert)</strong></p>
+		<p><a href="#toc">Go To Table of Contents</a></p>
+		
+		<hr class="space">
+	</div><!-- end div .container -->
+</body>
+</html>

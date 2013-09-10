@@ -1,0 +1,70 @@
+.countdown_wrapper {
+	width:440px;
+	margin:auto;
+}
+
+.dash {
+	float: left;
+	width:88px;	
+	/*text-align:center;*/
+}
+
+.digit {
+	float:left;
+	font-size: 32px;
+	font-weight: normal;
+	font-family: Verdana;
+	padding-top:3px;
+	color: #929292;
+}
+
+.dash_title {
+	
+	display: block;
+	bottom: 0px;
+	font-family: Verdana;
+	text-align:left;
+	
+	font-size: 9px;
+	color: #929292;
+	text-transform: capitalize;
+	letter-spacing: 0px;
+	
+	text-align:center;
+	
+}
+
+.spacer_digit {
+/*	margin-left:13px;
+	width:84px;
+	padding-left:4px;
+*/
+	
+}
+
+.box_left {
+	background:url(../images/box_start.png) 0 0 no-repeat;
+	float:left;
+	width:9px;
+	height:46px;
+}
+
+.box_right {
+	background:url(../images/box_end.png) 0 0 no-repeat;
+	float:left;
+	width:9px;
+	height:46px;
+}
+
+
+.box_middle {
+	background:url(../images/box_middle.png) 0 0 repeat-x;
+	float:left;
+	
+	height:46px;
+}
+
+.dash_center {
+	margin:auto;
+	width:60px;
+}
